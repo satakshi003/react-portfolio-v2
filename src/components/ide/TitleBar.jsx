@@ -5,16 +5,22 @@ import { personalInfo } from '../../data/content';
 export default function TitleBar() {
   return (
     <div className="flex items-center justify-between bg-[#3c3c3c] px-3 py-1">
-      <div className="flex items-center gap-4 text-[13px] text-[#cccccc]">
-        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer">File</span>
-        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer">Edit</span>
-        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer">View</span>
-        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer">Help</span>
+      <div className="flex items-center gap-2 md:gap-4 text-[13px] text-[#cccccc] flex-1 min-w-0">
+        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer whitespace-nowrap">File</span>
+        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer whitespace-nowrap">Edit</span>
+        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer whitespace-nowrap hidden sm:block">Selection</span>
+        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer whitespace-nowrap hidden md:block">View</span>
+        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer whitespace-nowrap hidden lg:block">Go</span>
+        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer whitespace-nowrap hidden lg:block">Run</span>
+        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer whitespace-nowrap hidden xl:block">Terminal</span>
+        <span className="hover:bg-[#505050] px-2 py-0.5 rounded cursor-pointer whitespace-nowrap hidden xl:block">Help</span>
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 text-[13px] text-[#cccccc]">
+
+      <div className="text-center text-[13px] text-[#cccccc] truncate px-4 absolute left-1/2 -translate-x-1/2 pointer-events-none hidden sm:block">
         portfolio.dev — {personalInfo.name}
       </div>
-      <div className="flex items-center gap-1">
+
+      <div className="flex items-center gap-1 flex-1 justify-end">
         <button className="p-1.5 hover:bg-[#505050] rounded transition-colors">
           <Minus size={14} className="text-[#cccccc]" />
         </button>
