@@ -5,9 +5,7 @@ import TiltCard from '../effects/TiltCard';
 import MagneticButton from '../effects/MagneticButton';
 import { projects, personalInfo } from '../../data/content';
 
-/**
- * Premium Projects Section
- */
+
 export default function Projects() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -33,11 +31,11 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 text-pink-400 text-sm font-medium uppercase tracking-wider mb-4"
+          className="inline-flex items-center gap-2 text-[#3b82f6] text-sm font-medium uppercase tracking-wider mb-4"
         >
-          <span className="w-8 h-[2px] bg-pink-500" />
+          <span className="w-8 h-[2px] bg-[#3b82f6]" />
           Featured Projects
-          <span className="w-8 h-[2px] bg-pink-500" />
+          <span className="w-8 h-[2px] bg-[#3b82f6]" />
         </motion.span>
 
         <motion.h2
@@ -72,14 +70,13 @@ export default function Projects() {
           <motion.div key={project.id} variants={itemVariants}>
             <TiltCard className="group h-full">
               <div className="flex flex-col h-full">
-                {/* Header */}
                 <div className="flex items-center justify-between mb-6">
                   <motion.div
-                    className="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/20 flex items-center justify-center"
+                    className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#3b82f6]/20 to-[#06b6d4]/20 border border-[#3b82f6]/20 flex items-center justify-center"
                     whileHover={{ rotate: 15 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
-                    <Folder size={24} className="text-pink-400" />
+                    <Folder size={24} className="text-[#3b82f6]" />
                   </motion.div>
 
                   <div className="flex items-center gap-2">
@@ -88,7 +85,7 @@ export default function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2.5 rounded-full text-gray-500 hover:text-pink-400 hover:bg-pink-500/10 transition-all duration-300"
+                        className="p-2.5 rounded-full text-gray-500 hover:text-[#3b82f6] hover:bg-[#3b82f6]/10 transition-all duration-300"
                         aria-label="View on GitHub"
                       >
                         <Github size={18} />
@@ -99,7 +96,7 @@ export default function Projects() {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2.5 rounded-full text-gray-500 hover:text-pink-400 hover:bg-pink-500/10 transition-all duration-300"
+                        className="p-2.5 rounded-full text-gray-500 hover:text-[#3b82f6] hover:bg-[#3b82f6]/10 transition-all duration-300"
                         aria-label="View Demo"
                       >
                         <ExternalLink size={18} />
@@ -107,22 +104,18 @@ export default function Projects() {
                     )}
                   </div>
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-pink-400 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-[#3b82f6] transition-colors duration-300">
                   {project.title}
                 </h3>
 
                 <p className="text-gray-500 text-sm mb-6 flex-grow leading-relaxed">
                   {project.description}
                 </p>
-
-                {/* Tech stack */}
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-xs font-medium text-pink-300/80 bg-pink-500/10 rounded-full border border-pink-500/20"
+                      className="px-3 py-1 text-xs font-medium text-pink-300/80 bg-[#3b82f6]/10 rounded-full border border-[#3b82f6]/20"
                     >
                       {tech}
                     </span>
@@ -133,8 +126,6 @@ export default function Projects() {
           </motion.div>
         ))}
       </motion.div>
-
-      {/* View more button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

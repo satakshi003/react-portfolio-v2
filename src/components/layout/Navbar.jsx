@@ -3,9 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { navLinks, personalInfo } from '../../data/content';
 
-/**
- * Premium Navigation Bar
- */
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,17 +37,14 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <motion.a
             href="#"
-            className="text-xl font-bold gradient-text-pink"
+            className="text-xl font-bold gradient-text-accent"
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 400 }}
           >
             {personalInfo.name.split(' ')[0]}
           </motion.a>
-
-          {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
               <motion.li
@@ -63,13 +58,11 @@ export default function Navbar() {
                   className="group relative text-sm text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-pink-500 to-purple-500 transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-[#3b82f6] to-[#06b6d4] transition-all duration-300 group-hover:w-full" />
                 </a>
               </motion.li>
             ))}
           </ul>
-
-          {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
             onClick={() => setIsOpen(!isOpen)}
@@ -79,8 +72,6 @@ export default function Navbar() {
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
         </div>
-
-        {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -101,7 +92,7 @@ export default function Navbar() {
                     <a
                       href={link.href}
                       onClick={handleNavClick}
-                      className="block text-gray-400 hover:text-pink-400 transition-colors py-2"
+                      className="block text-gray-400 hover:text-[#3b82f6] transition-colors py-2"
                     >
                       {link.name}
                     </a>

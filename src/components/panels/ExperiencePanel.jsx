@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 import { experience, education, certifications } from '../../data/content';
 
-/**
- * Experience Panel - Git timeline style
- */
+
 export default function ExperiencePanel() {
   return (
     <div className="p-8">
@@ -12,7 +10,7 @@ export default function ExperiencePanel() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          {/* Header */}
+
           <div className="flex items-center gap-3 mb-8">
             <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/20 flex items-center justify-center">
               <span className="text-xl">📋</span>
@@ -23,7 +21,7 @@ export default function ExperiencePanel() {
             </div>
           </div>
 
-          {/* Experience Section */}
+
           <div className="mb-10">
             <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
               <span className="text-[#3b82f6]">##</span>
@@ -72,7 +70,7 @@ export default function ExperiencePanel() {
             ))}
           </div>
 
-          {/* Education Section */}
+
           <div className="mb-10">
             <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
               <span className="text-[#3b82f6]">##</span>
@@ -104,10 +102,10 @@ export default function ExperiencePanel() {
             ))}
           </div>
 
-          {/* Certifications */}
+
           <div>
             <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <span className="text-[#ff2d75]">##</span>
+              <span className="text-[#3b82f6]">##</span>
               Certifications
             </h2>
 
@@ -121,7 +119,7 @@ export default function ExperiencePanel() {
               >
                 <div className="flex items-start justify-between mb-1">
                   <h3 className="text-white font-medium">{cert.title}</h3>
-                  <span className="text-xs text-[#c586c0]">{cert.year}</span>
+                  <span className="text-xs text-[#3b82f6]">{cert.year}</span>
                 </div>
                 <p className="text-[#6e6e6e] text-sm">{cert.issuer}</p>
               </motion.div>

@@ -1,8 +1,6 @@
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
-/**
- * Section wrapper with consistent padding and fade-in animation
- */
+
 export default function SectionWrapper({
   children,
   id,

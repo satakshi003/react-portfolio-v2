@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
-/**
- * Custom animated cursor with magnetic attraction
- */
+
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -57,7 +55,6 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Main cursor dot */}
       <motion.div
         className="fixed top-0 left-0 w-4 h-4 pointer-events-none z-[9999] mix-blend-difference"
         style={{
@@ -75,8 +72,6 @@ export default function CustomCursor() {
           transition={{ duration: 0.2 }}
         />
       </motion.div>
-
-      {/* Cursor ring */}
       <motion.div
         className="fixed top-0 left-0 w-10 h-10 pointer-events-none z-[9998] border border-white/30 rounded-full"
         style={{
@@ -91,8 +86,6 @@ export default function CustomCursor() {
         }}
         transition={{ duration: 0.3 }}
       />
-
-      {/* Glow effect on hover */}
       {isHovering && (
         <motion.div
           className="fixed top-0 left-0 w-20 h-20 pointer-events-none z-[9997] rounded-full"

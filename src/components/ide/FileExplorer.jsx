@@ -13,9 +13,7 @@ import {
   Star
 } from 'lucide-react';
 
-/**
- * File Explorer Sidebar - VS Code style
- */
+
 export default function FileExplorer({ activeSection, onSectionChange, sections }) {
   const [expanded, setExpanded] = useState(true);
 
@@ -30,12 +28,9 @@ export default function FileExplorer({ activeSection, onSectionChange, sections 
 
   return (
     <div className="w-60 bg-[#252526] border-r border-[#3c3c3c] flex flex-col h-full">
-      {/* Header */}
       <div className="px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-[#bbbbbb]">
         Explorer
       </div>
-
-      {/* Project folder */}
       <div className="flex-1 overflow-y-auto">
         <button
           onClick={() => setExpanded(!expanded)}
@@ -45,8 +40,6 @@ export default function FileExplorer({ activeSection, onSectionChange, sections 
           {expanded ? <FolderOpen size={16} className="text-[#dcb67a]" /> : <Folder size={16} className="text-[#dcb67a]" />}
           <span className="ml-1 font-medium">portfolio</span>
         </button>
-
-        {/* Files */}
         <AnimatePresence>
           {expanded && (
             <motion.div
@@ -84,8 +77,6 @@ export default function FileExplorer({ activeSection, onSectionChange, sections 
           )}
         </AnimatePresence>
       </div>
-
-      {/* Footer */}
       <div className="p-3 border-t border-[#3c3c3c] text-[11px] text-[#6e6e6e]">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-green-500" />

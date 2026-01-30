@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 import { about } from '../../data/content';
 
-/**
- * About Panel - README style
- */
+
 export default function AboutPanel() {
   return (
     <div className="p-8">
@@ -13,7 +11,7 @@ export default function AboutPanel() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          {/* README header */}
+
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/20 flex items-center justify-center">
               <span className="text-xl">📖</span>
@@ -21,9 +19,9 @@ export default function AboutPanel() {
             <h1 className="text-2xl font-bold text-white">README.md</h1>
           </div>
 
-          {/* Markdown-style content */}
+
           <div className="prose prose-invert max-w-none">
-            {/* Title */}
+
             <div className="border-b border-[#3c3c3c] pb-4 mb-6">
               <h1 className="text-3xl font-bold text-white mb-2 flex items-center gap-3">
                 <span className="text-[#3b82f6]">#</span>
@@ -31,7 +29,7 @@ export default function AboutPanel() {
               </h1>
             </div>
 
-            {/* Quote */}
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -43,7 +41,7 @@ export default function AboutPanel() {
               </p>
             </motion.div>
 
-            {/* Description */}
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -55,7 +53,7 @@ export default function AboutPanel() {
               </p>
             </motion.div>
 
-            {/* Highlights section */}
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -82,7 +80,7 @@ export default function AboutPanel() {
               </div>
             </motion.div>
 
-            {/* Code block style fun fact */}
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -97,7 +95,7 @@ export default function AboutPanel() {
               <div className="bg-[#252526] rounded-lg border border-[#3c3c3c] p-4 font-mono text-sm">
                 <div className="flex">
                   <span className="line-number">1</span>
-                  <span className="syntax-comment">// When I'm not coding...</span>
+                  <span className="syntax-comment">{'// Some fun about my coding journey'}</span>
                 </div>
                 <div className="flex">
                   <span className="line-number">2</span>

@@ -1,6 +1,4 @@
-/**
- * Skill tag component
- */
+
 export default function SkillTag({ children, className = '' }) {
   return (
     <span

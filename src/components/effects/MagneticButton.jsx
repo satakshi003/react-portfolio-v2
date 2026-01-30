@@ -1,9 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-/**
- * Magnetic button that attracts toward cursor
- */
+
 export default function MagneticButton({
   children,
   className = '',
@@ -83,10 +81,7 @@ export default function MagneticButton({
       {...elementProps}
       {...props}
     >
-      {/* Shimmer effect */}
       <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-700" />
-
-      {/* Content */}
       <span className="relative z-10 flex items-center gap-2">
         {children}
       </span>

@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Folder } from 'lucide-react';
-import { projects } from '../../data/content';
+import { projects, personalInfo } from '../../data/content';
 
-/**
- * Projects Panel - Git log style
- */
+
 export default function ProjectsPanel() {
   return (
     <div className="p-8">
@@ -13,7 +11,7 @@ export default function ProjectsPanel() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          {/* Header */}
+
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/20 flex items-center justify-center">
               <Folder size={20} className="text-[#3b82f6]" />
@@ -24,7 +22,7 @@ export default function ProjectsPanel() {
             </div>
           </div>
 
-          {/* Projects as git commits */}
+
           <div className="space-y-4">
             {projects.map((project, index) => (
               <motion.div
@@ -34,18 +32,18 @@ export default function ProjectsPanel() {
                 transition={{ delay: 0.2 + index * 0.1 }}
                 className="group relative"
               >
-                {/* Git branch line */}
+
                 <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#3c3c3c] group-last:hidden" />
 
                 <div className="flex gap-4">
-                  {/* Commit dot */}
+
                   <div className="relative z-10 w-8 h-8 rounded-full bg-[#3b82f6] flex items-center justify-center text-white text-xs font-mono">
                     {String(project.id).padStart(2, '0')}
                   </div>
 
-                  {/* Project card */}
+
                   <div className="flex-1 p-5 rounded-lg bg-[#252526] border border-[#3c3c3c] hover:border-[#3b82f6]/50 transition-all group-hover:bg-[#2a2a2a]">
-                    {/* Header row */}
+
                     <div className="flex items-start justify-between mb-3">
                       <div>
                         <h3 className="text-lg font-semibold text-white group-hover:text-[#3b82f6] transition-colors">
@@ -80,12 +78,12 @@ export default function ProjectsPanel() {
                       </div>
                     </div>
 
-                    {/* Description */}
+
                     <p className="text-[#9e9e9e] text-sm mb-4 leading-relaxed">
                       {project.description}
                     </p>
 
-                    {/* Tech stack as diff additions */}
+
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
                         <span
@@ -102,7 +100,7 @@ export default function ProjectsPanel() {
             ))}
           </div>
 
-          {/* View more */}
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -110,7 +108,7 @@ export default function ProjectsPanel() {
             className="mt-8 text-center"
           >
             <a
-              href={`https://github.com/satakshi-subhasmita`}
+              href={`https://github.com/${personalInfo.github.split('/').pop()}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 text-sm text-[#cccccc] border border-[#3c3c3c] rounded hover:border-[#3b82f6] hover:text-[#3b82f6] transition-all"

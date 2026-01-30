@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-/**
- * Custom hook for scroll-based fade-in animations
- * Uses Intersection Observer API
- */
+
 export function useScrollAnimation(options = {}) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -16,7 +13,7 @@ export function useScrollAnimation(options = {}) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(element); // Only animate once
+          observer.unobserve(element); 
         }
       },
       {

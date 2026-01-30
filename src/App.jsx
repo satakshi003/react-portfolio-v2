@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './index.css';
 
-// IDE Components
+
 import TitleBar from './components/ide/TitleBar';
 import FileExplorer from './components/ide/FileExplorer';
 import TabBar from './components/ide/TabBar';
 import Terminal from './components/ide/Terminal';
 import IDECursor from './components/ide/IDECursor';
 
-// Panel Components
+
 import HeroPanel from './components/panels/HeroPanel';
 import AboutPanel from './components/panels/AboutPanel';
 import SkillsPanel from './components/panels/SkillsPanel';
@@ -17,7 +17,7 @@ import ProjectsPanel from './components/panels/ProjectsPanel';
 import ExperiencePanel from './components/panels/ExperiencePanel';
 import ContactPanel from './components/panels/ContactPanel';
 
-// Section configuration
+
 const sections = [
   { id: 'hero', filename: 'Hero.jsx', component: HeroPanel },
   { id: 'about', filename: 'About.md', component: AboutPanel },
@@ -30,10 +30,10 @@ const sections = [
 function App() {
   const [activeSection, setActiveSection] = useState(0);
 
-  // Handle section navigation via scroll
+
   useEffect(() => {
     const handleScroll = () => {
-      // Offset for fixed header (approx 80px)
+
       const scrollPosition = window.scrollY + 300;
 
       sections.forEach((section, index) => {
@@ -51,12 +51,12 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navigate to section
+
   const navigateToSection = (index) => {
     const section = sections[index];
     const element = document.getElementById(section.id);
     if (element) {
-      // Offset for fixed header
+
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
@@ -71,15 +71,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#1e1e1e]">
-      {/* Custom cursor - hidden on touch */}
       <div className="hidden md:block">
         <IDECursor />
       </div>
 
-      {/* Top Header Fixed */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#1e1e1e]">
         <TitleBar />
-        {/* Tab Bar Container - Fixed Top, offset by Sidebar width on desktop */}
         <div className="md:pl-60 border-b border-[#3c3c3c]">
           <TabBar
             sections={sections}
@@ -89,7 +86,6 @@ function App() {
         </div>
       </div>
 
-      {/* Sidebar - Fixed Left, Full Height */}
       <div className="fixed top-[32px] bottom-[36px] left-0 w-60 z-40 bg-[#252526] border-r border-[#3c3c3c] hidden md:block overflow-hidden">
         <FileExplorer
           activeSection={activeSection}
@@ -98,7 +94,6 @@ function App() {
         />
       </div>
 
-      {/* Main scrollable content */}
       <main className="md:ml-60 pt-[80px] pb-[40px]">
         {sections.map((section, index) => {
           const PanelComponent = section.component;
@@ -119,7 +114,6 @@ function App() {
         })}
       </main>
 
-      {/* Fixed terminal at bottom */}
       <div className="fixed bottom-0 left-0 right-0 z-50">
         <Terminal activeSection={activeSection} sections={sections} />
       </div>

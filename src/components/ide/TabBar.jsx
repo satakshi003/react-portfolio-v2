@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 import { X, Circle } from 'lucide-react';
 
-/**
- * Tab Bar - VS Code style tabs
- */
+
 export default function TabBar({ sections, activeSection, onSectionChange }) {
   return (
     <div className="flex items-center bg-[#252526] border-b border-[#3c3c3c] overflow-x-auto hide-scrollbar">
@@ -24,23 +22,18 @@ export default function TabBar({ sections, activeSection, onSectionChange }) {
             `}
             whileHover={{ backgroundColor: isActive ? '#1e1e1e' : '#323232' }}
           >
-            {/* Active indicator */}
             {isActive && (
               <motion.div
                 layoutId="activeTab"
                 className="absolute top-0 left-0 right-0 h-[2px] bg-[#3b82f6]"
               />
             )}
-
-            {/* File icon indicator */}
             <Circle
               size={8}
               className={isActive ? 'text-[#3b82f6] fill-[#3b82f6]' : 'text-[#519aba] fill-[#519aba]'}
             />
 
             <span>{section.filename}</span>
-
-            {/* Close button (decorative) */}
             <X
               size={14}
               className="ml-2 text-[#6e6e6e] hover:text-white transition-colors opacity-0 group-hover:opacity-100"
@@ -48,8 +41,6 @@ export default function TabBar({ sections, activeSection, onSectionChange }) {
           </motion.button>
         );
       })}
-
-      {/* Empty space */}
       <div className="flex-1 bg-[#252526]" />
     </div>
   );

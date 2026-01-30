@@ -1,6 +1,4 @@
-/**
- * Reusable Card Component with glassmorphism effect
- */
+
 export default function Card({
   children,
   className = '',

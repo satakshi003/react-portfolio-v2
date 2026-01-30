@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
-/**
- * Custom IDE Cursor
- */
+
 export default function IDECursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -42,7 +40,6 @@ export default function IDECursor() {
 
   return (
     <>
-      {/* Main cursor */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999]"
         style={{
@@ -50,7 +47,6 @@ export default function IDECursor() {
           y: cursorY,
         }}
       >
-        {/* Cursor shape */}
         <motion.div
           className="relative"
           animate={{
@@ -58,14 +54,11 @@ export default function IDECursor() {
           }}
           transition={{ duration: 0.15 }}
         >
-          {/* I-beam cursor */}
           <div className="w-[2px] h-5 bg-[#3b82f6] -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-[2px] bg-[#3b82f6] -translate-y-1/2" />
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-[2px] bg-[#3b82f6] translate-y-1/2" />
         </motion.div>
       </motion.div>
-
-      {/* Glow effect */}
       {isHovering && (
         <motion.div
           className="fixed top-0 left-0 w-8 h-8 pointer-events-none z-[9998] rounded-full"

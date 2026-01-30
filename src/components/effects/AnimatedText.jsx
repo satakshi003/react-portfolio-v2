@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 
-/**
- * Animated text reveal - character by character
- */
+
 export default function AnimatedText({
   text,
   className = '',

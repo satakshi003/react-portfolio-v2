@@ -1,7 +1,4 @@
-/**
- * Reusable Button Component
- * Variants: primary, secondary, ghost
- */
+
 export default function Button({
   children,
   variant = 'primary',

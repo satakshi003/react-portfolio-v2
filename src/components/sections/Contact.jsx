@@ -4,9 +4,7 @@ import ScrollSection from '../effects/ScrollSection';
 import MagneticButton from '../effects/MagneticButton';
 import { personalInfo } from '../../data/content';
 
-/**
- * Premium Contact Section
- */
+
 export default function Contact() {
   const currentYear = new Date().getFullYear();
 
@@ -42,16 +40,16 @@ export default function Contact() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ type: 'spring', delay: 0.1 }}
-          className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 mb-8"
+          className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#3b82f6]/20 to-[#06b6d4]/20 border border-[#3b82f6]/30 mb-8"
         >
-          <Sparkles size={32} className="text-pink-400" />
+          <Sparkles size={32} className="text-[#3b82f6]" />
         </motion.div>
 
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 text-pink-400 text-sm font-medium uppercase tracking-wider mb-4"
+          className="inline-flex items-center gap-2 text-[#3b82f6] text-sm font-medium uppercase tracking-wider mb-4"
         >
           Get In Touch
         </motion.span>
@@ -64,7 +62,7 @@ export default function Contact() {
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
         >
           Let's Work{' '}
-          <span className="gradient-text-pink">Together</span>
+          <span className="gradient-text-accent">Together</span>
         </motion.h2>
 
         <motion.p
@@ -77,8 +75,6 @@ export default function Contact() {
           I'm currently looking for new opportunities. Whether you have a question
           or just want to say hi, I'll try my best to get back to you!
         </motion.p>
-
-        {/* Contact cards */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,8 +112,6 @@ export default function Contact() {
             );
           })}
         </motion.div>
-
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,8 +128,6 @@ export default function Contact() {
           </MagneticButton>
         </motion.div>
       </div>
-
-      {/* Footer */}
       <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -144,21 +136,18 @@ export default function Contact() {
         className="mt-32 pt-8 border-t border-white/5"
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo/Name */}
           <motion.div
-            className="text-2xl font-bold gradient-text-pink"
+            className="text-2xl font-bold gradient-text-accent"
             whileHover={{ scale: 1.05 }}
           >
             {personalInfo.name.split(' ')[0]}
           </motion.div>
-
-          {/* Social links */}
           <div className="flex items-center gap-4">
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full border border-white/10 text-gray-500 hover:text-pink-400 hover:border-pink-500/50 hover:bg-pink-500/10 transition-all duration-300"
+              className="p-3 rounded-full border border-white/10 text-gray-500 hover:text-[#3b82f6] hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 transition-all duration-300"
               aria-label="GitHub"
             >
               <Github size={18} />
@@ -167,21 +156,19 @@ export default function Contact() {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full border border-white/10 text-gray-500 hover:text-pink-400 hover:border-pink-500/50 hover:bg-pink-500/10 transition-all duration-300"
+              className="p-3 rounded-full border border-white/10 text-gray-500 hover:text-[#3b82f6] hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 transition-all duration-300"
               aria-label="LinkedIn"
             >
               <Linkedin size={18} />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="p-3 rounded-full border border-white/10 text-gray-500 hover:text-pink-400 hover:border-pink-500/50 hover:bg-pink-500/10 transition-all duration-300"
+              className="p-3 rounded-full border border-white/10 text-gray-500 hover:text-[#3b82f6] hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 transition-all duration-300"
               aria-label="Email"
             >
               <Mail size={18} />
             </a>
           </div>
-
-          {/* Copyright */}
           <p className="text-gray-600 text-sm">
             © {currentYear} {personalInfo.name}. All rights reserved.
           </p>

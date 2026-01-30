@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 
-/**
- * Scroll section wrapper with animations
- */
+
 export default function ScrollSection({
   children,
   id,

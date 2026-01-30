@@ -3,9 +3,7 @@ import ScrollSection from '../effects/ScrollSection';
 import { about } from '../../data/content';
 import { Sparkles, Code2, Palette, Zap } from 'lucide-react';
 
-/**
- * Premium About Section
- */
+
 export default function About() {
   const highlights = [
     { icon: Code2, text: 'Clean Code', color: 'pink' },
@@ -17,7 +15,6 @@ export default function About() {
   return (
     <ScrollSection id="about">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
-        {/* Left - Content */}
         <div>
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -25,8 +22,8 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 text-pink-400 text-sm font-medium uppercase tracking-wider mb-4">
-              <span className="w-8 h-[2px] bg-pink-500" />
+            <span className="inline-flex items-center gap-2 text-[#3b82f6] text-sm font-medium uppercase tracking-wider mb-4">
+              <span className="w-8 h-[2px] bg-[#3b82f6]" />
               About Me
             </span>
 
@@ -38,8 +35,6 @@ export default function About() {
               {about.description}
             </p>
           </motion.div>
-
-          {/* Highlight cards */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +45,7 @@ export default function About() {
             {highlights.map((item, index) => (
               <motion.div
                 key={index}
-                className="group p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-pink-500/30 transition-all duration-300"
+                className="group p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-[#3b82f6]/30 transition-all duration-300"
                 whileHover={{ y: -5 }}
               >
                 <item.icon
@@ -64,8 +59,6 @@ export default function About() {
             ))}
           </motion.div>
         </div>
-
-        {/* Right - Visual */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -74,19 +67,13 @@ export default function About() {
           className="relative"
         >
           <div className="relative aspect-square max-w-md mx-auto">
-            {/* Decorative gradient blob */}
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 via-purple-500/10 to-transparent rounded-3xl blur-3xl" />
-
-            {/* Code window mockup */}
-            <div className="relative h-full glass-pink rounded-3xl p-6 overflow-hidden">
-              {/* Window header */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#3b82f6]/20 via-[#06b6d4]/10 to-transparent rounded-3xl blur-3xl" />
+            <div className="relative h-full glass-dark rounded-3xl p-6 overflow-hidden">
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-3 h-3 rounded-full bg-pink-500" />
-                <div className="w-3 h-3 rounded-full bg-purple-500" />
+                <div className="w-3 h-3 rounded-full bg-[#3b82f6]" />
+                <div className="w-3 h-3 rounded-full bg-[#06b6d4]" />
                 <div className="w-3 h-3 rounded-full bg-gray-600" />
               </div>
-
-              {/* Code content */}
               <div className="font-mono text-sm space-y-3">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -94,7 +81,7 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
                 >
-                  <span className="text-gray-500">{'// My approach'}</span>
+                  <span className="text-gray-500">{'// Mission'}</span>
                 </motion.div>
 
                 <motion.div
@@ -103,10 +90,10 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
                 >
-                  <span className="text-purple-400">const</span>{' '}
+                  <span className="text-[#06b6d4]">const</span>{' '}
                   <span className="text-white">developer</span>{' '}
                   <span className="text-gray-500">=</span>{' '}
-                  <span className="text-pink-400">{'{'}</span>
+                  <span className="text-[#3b82f6]">{'{'}</span>
                 </motion.div>
 
                 <motion.div
@@ -148,7 +135,7 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.8 }}
                 >
-                  <span className="text-pink-400">{'}'}</span>;
+                  <span className="text-[#3b82f6]">{'}'}</span>;
                 </motion.div>
 
                 <motion.div
@@ -158,14 +145,14 @@ export default function About() {
                   transition={{ delay: 1 }}
                   className="pt-4"
                 >
-                  <span className="text-gray-500">{'// Let\'s build together'}</span>
-                  <span className="animate-pulse text-pink-400 ml-1">▊</span>
+                  <span className="text-gray-300">{'// Let\'s build something amazing'}</span>
+                  <span className="animate-pulse text-[#3b82f6] ml-1">▊</span>
                 </motion.div>
               </div>
             </div>
           </div>
         </motion.div>
-      </div>
-    </ScrollSection>
+      </div >
+    </ScrollSection >
   );
 }

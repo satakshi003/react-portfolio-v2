@@ -3,14 +3,12 @@ import { motion } from 'framer-motion';
 import { Terminal as TerminalIcon, ChevronUp, ChevronDown } from 'lucide-react';
 import { personalInfo } from '../../data/content';
 
-/**
- * Interactive Terminal
- */
+
 export default function Terminal({ activeSection, sections }) {
   const [commands, setCommands] = useState([]);
   const [collapsed, setCollapsed] = useState(false);
 
-  // Add welcome message on mount
+  
   useEffect(() => {
     setCommands([
       { type: 'system', text: `Welcome to ${personalInfo.name}'s portfolio!` },
@@ -19,11 +17,11 @@ export default function Terminal({ activeSection, sections }) {
     ]);
   }, []);
 
-  // Log section changes
+  
   useEffect(() => {
     if (sections[activeSection]) {
       setCommands(prev => [
-        ...prev.slice(-8), // Keep last 8 messages
+        ...prev.slice(-8), 
         {
           type: 'command',
           text: `cd portfolio/${sections[activeSection].filename}`
@@ -34,7 +32,6 @@ export default function Terminal({ activeSection, sections }) {
 
   return (
     <div className={`bg-[#1e1e1e] border-t border-[#3c3c3c] transition-all duration-300 ${collapsed ? 'h-8' : 'h-36'}`}>
-      {/* Header */}
       <div className="flex items-center justify-between px-4 py-1 bg-[#252526] border-b border-[#3c3c3c]">
         <div className="flex items-center gap-2 text-[12px] text-[#cccccc]">
           <TerminalIcon size={14} />
@@ -47,8 +44,6 @@ export default function Terminal({ activeSection, sections }) {
           {collapsed ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
         </button>
       </div>
-
-      {/* Terminal content */}
       {!collapsed && (
         <div className="p-3 font-mono text-[12px] overflow-y-auto h-[calc(100%-28px)]">
           {commands.map((cmd, index) => (
@@ -73,8 +68,6 @@ export default function Terminal({ activeSection, sections }) {
               )}
             </motion.div>
           ))}
-
-          {/* Cursor line */}
           <div className="flex items-center gap-2">
             <span className="text-[#4ec9b0]">~</span>
             <span className="text-[#569cd6]">$</span>

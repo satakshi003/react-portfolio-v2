@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { personalInfo } from '../../data/content';
+import profileImg from '../sections/my-profile.png';
 
-/**
- * Hero Panel - Code file style
- */
 export default function HeroPanel() {
   const codeLines = [
     { lineNum: 1, content: <span className="syntax-comment">{'// Welcome to my portfolio'}</span> },
@@ -19,7 +17,7 @@ export default function HeroPanel() {
     { lineNum: 10, content: <span className="syntax-comment">{'// Connect with me'}</span> },
     { lineNum: 11, content: <><span className="syntax-keyword">export</span> <span className="syntax-keyword">const</span> <span className="syntax-variable">links</span> = {'{'}</> },
     { lineNum: 12, content: <span className="ml-6"><span className="syntax-variable">github</span>: <span className="syntax-string">"{personalInfo.github}"</span>,</span> },
-    { lineNum: 13, content: <span className="ml-6"><span className="syntax-variable">linkedin</span>: <span className="syntax-string">"linkedin.com/in/satakshi"</span>,</span> },
+    { lineNum: 13, content: <span className="ml-6"><span className="syntax-variable">linkedin</span>: <span className="syntax-string">"{personalInfo.linkedin}"</span>,</span> },
     { lineNum: 14, content: <span className="ml-6"><span className="syntax-variable">email</span>: <span className="syntax-string">"{personalInfo.email}"</span>,</span> },
     { lineNum: 15, content: '}' },
   ];
@@ -27,20 +25,18 @@ export default function HeroPanel() {
   return (
     <div className="min-h-full flex items-center justify-center p-8">
       <div className="max-w-4xl w-full">
-        {/* Profile section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="flex items-center gap-6 mb-12"
         >
-          {/* Profile image */}
           <div className="relative">
             <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#3b82f6] to-[#06b6d4] p-[3px]">
               <div className="w-full h-full rounded-full bg-[#1e1e1e] flex items-center justify-center overflow-hidden">
                 <img
-                  src="/profile-placeholder.svg"
-                  alt="Profile"
+                  src={profileImg}
+                  alt="Satakshi Subhasmita"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.target.style.display = 'none';
@@ -59,14 +55,12 @@ export default function HeroPanel() {
           </div>
         </motion.div>
 
-        {/* Code block */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
           className="bg-[#252526] rounded-lg border border-[#3c3c3c] overflow-hidden"
         >
-          {/* Code header */}
           <div className="flex items-center gap-2 px-4 py-2 bg-[#2d2d2d] border-b border-[#3c3c3c]">
             <div className="flex gap-2">
               <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
@@ -76,7 +70,6 @@ export default function HeroPanel() {
             <span className="text-[#969696] text-sm ml-2">developer.js</span>
           </div>
 
-          {/* Code content */}
           <div className="p-4 font-mono text-sm overflow-x-auto">
             {codeLines.map((line, index) => (
               <motion.div
@@ -92,8 +85,6 @@ export default function HeroPanel() {
             ))}
           </div>
         </motion.div>
-
-        {/* Social links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

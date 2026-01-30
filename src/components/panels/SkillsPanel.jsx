@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 import { skills } from '../../data/content';
 
-/**
- * Skills Panel - package.json style
- */
+
 export default function SkillsPanel() {
   const allSkills = [
     ...skills.languages.map(s => ({ name: s, category: 'language' })),
@@ -31,7 +29,7 @@ export default function SkillsPanel() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          {/* Header */}
+
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/20 flex items-center justify-center">
               <span className="text-xl">📦</span>
@@ -39,7 +37,7 @@ export default function SkillsPanel() {
             <h1 className="text-2xl font-bold text-white">package.json</h1>
           </div>
 
-          {/* JSON-style content */}
+
           <div className="bg-[#252526] rounded-lg border border-[#3c3c3c] overflow-hidden">
             <div className="p-4 font-mono text-sm">
               <div className="flex">
@@ -75,10 +73,10 @@ export default function SkillsPanel() {
                 </span>
               </div>
 
-              {/* Skills as dependencies */}
+
               {allSkills.map((skill, index) => (
                 <motion.div
-                  key={skill.name}
+                  key={`${skill.name}-${skill.category}`}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + index * 0.03 }}
@@ -108,7 +106,7 @@ export default function SkillsPanel() {
             </div>
           </div>
 
-          {/* Visual skill breakdown */}
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -2,9 +2,7 @@ import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, MapPin, Send } from 'lucide-react';
 import { personalInfo } from '../../data/content';
 
-/**
- * Contact Panel - API endpoint style
- */
+
 export default function ContactPanel() {
   const currentYear = new Date().getFullYear();
 
@@ -15,7 +13,7 @@ export default function ContactPanel() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          {/* Header */}
+
           <div className="flex items-center gap-3 mb-8">
             <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/20 flex items-center justify-center">
               <Send size={20} className="text-[#3b82f6]" />
@@ -26,7 +24,7 @@ export default function ContactPanel() {
             </div>
           </div>
 
-          {/* API-style request */}
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -35,7 +33,7 @@ export default function ContactPanel() {
           >
             <div className="p-4 font-mono text-sm">
               <div className="mb-4">
-                <span className="text-[#6e6e6e]">// Let's connect!</span>
+                <span className="text-[#6e6e6e]">{'// Success fully sent message'}</span>
               </div>
 
               <div className="flex">
@@ -90,7 +88,7 @@ export default function ContactPanel() {
             </div>
           </motion.div>
 
-          {/* Contact cards */}
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -135,7 +133,7 @@ export default function ContactPanel() {
             </a>
           </motion.div>
 
-          {/* CTA */}
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -151,7 +149,7 @@ export default function ContactPanel() {
             </a>
           </motion.div>
 
-          {/* Footer */}
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 
-/**
- * Animated floating glow orbs background
- */
+
 export default function GlowOrbs() {
   const orbs = [
     {
@@ -51,8 +49,6 @@ export default function GlowOrbs() {
           }}
         />
       ))}
-
-      {/* Subtle grid overlay */}
       <div
         className="absolute inset-0 opacity-[0.015]"
         style={{

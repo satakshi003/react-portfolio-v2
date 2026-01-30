@@ -1,4 +1,4 @@
-// Portfolio content data - Edit this file to customize your portfolio
+
 
 export const personalInfo = {
   name: "Satakshi Subhasmita",
@@ -6,8 +6,8 @@ export const personalInfo = {
   email: "soumya3955@gmail.com",
   phone: "7735555020",
   location: "Bhubaneswar, Odisha",
-  linkedin: "https://linkedin.com/in/satakshi-subhasmita",
-  github: "https://github.com/satakshi-subhasmita", // Update with your actual GitHub
+  linkedin: "https://www.linkedin.com/in/satakshi-subhasmita-7a9886202/",
+  github: "https://github.com/satakshi003",
 };
 
 export const about = {
@@ -39,7 +39,7 @@ export const projects = [
     description:
       "A comprehensive backend system with RESTful APIs for user authentication, video metadata management, and channel logic. Features optimized MongoDB schema for scalable data handling.",
     tech: ["Node.js", "Express.js", "MongoDB"],
-    github: "#", // Add your GitHub link
+    github: "#", 
     demo: null,
   },
   {
@@ -48,8 +48,8 @@ export const projects = [
     description:
       "An engaging quiz application with dynamic question handling, real-time scoring, and client-side validation. Built with vanilla JavaScript for optimal performance.",
     tech: ["JavaScript", "HTML", "CSS"],
-    github: "#", // Add your GitHub link
-    demo: "#", // Add demo link if available
+    github: "#", 
+    demo: "#", 
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ export const projects = [
     description:
       "A feature-rich e-commerce interface with cart functionality, dynamic DOM manipulation, and responsive UI elements simulating real-world shopping behavior.",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "#", // Add your GitHub link
+    github: "#", 
     demo: null,
   },
 ];

@@ -3,40 +3,38 @@ import ScrollSection from '../effects/ScrollSection';
 import TiltCard from '../effects/TiltCard';
 import { skills } from '../../data/content';
 
-/**
- * Premium Skills Section with 3D cards
- */
+
 export default function Skills() {
   const skillCategories = [
     {
       name: 'Languages',
       items: skills.languages,
       icon: '💻',
-      gradient: 'from-pink-500/20 to-transparent'
+      gradient: 'from-[#3b82f6]/20 to-transparent'
     },
     {
       name: 'Frontend',
       items: skills.frontend,
       icon: '🎨',
-      gradient: 'from-purple-500/20 to-transparent'
+      gradient: 'from-[#06b6d4]/20 to-transparent'
     },
     {
       name: 'Backend',
       items: skills.backend,
       icon: '⚙️',
-      gradient: 'from-rose-500/20 to-transparent'
+      gradient: 'from-[#3b82f6]/20 to-transparent'
     },
     {
       name: 'Databases',
       items: skills.databases,
       icon: '🗄️',
-      gradient: 'from-pink-500/20 to-transparent'
+      gradient: 'from-[#3b82f6]/20 to-transparent'
     },
     {
       name: 'Tools',
       items: skills.tools,
       icon: '🛠️',
-      gradient: 'from-purple-500/20 to-transparent'
+      gradient: 'from-[#06b6d4]/20 to-transparent'
     },
   ];
 
@@ -66,11 +64,11 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 text-pink-400 text-sm font-medium uppercase tracking-wider mb-4"
+          className="inline-flex items-center gap-2 text-[#3b82f6] text-sm font-medium uppercase tracking-wider mb-4"
         >
-          <span className="w-8 h-[2px] bg-pink-500" />
+          <span className="w-8 h-[2px] bg-[#3b82f6]" />
           Skills & Technologies
-          <span className="w-8 h-[2px] bg-pink-500" />
+          <span className="w-8 h-[2px] bg-[#3b82f6]" />
         </motion.span>
 
         <motion.h2
@@ -94,7 +92,6 @@ export default function Skills() {
         {skillCategories.map((category) => (
           <motion.div key={category.name} variants={itemVariants}>
             <TiltCard className="group h-full">
-              {/* Gradient accent */}
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
               />
@@ -116,7 +113,7 @@ export default function Skills() {
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.05 }}
                       className="px-4 py-2 text-sm font-medium text-gray-300 bg-white/5 border border-white/10 rounded-full
-                                 hover:border-pink-500/50 hover:bg-pink-500/10 hover:text-pink-300 
+                                 hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-pink-300 
                                  transition-all duration-300 cursor-default"
                     >
                       {skill}
