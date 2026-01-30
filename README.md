@@ -2,7 +2,7 @@
 
 A modern, high-performance portfolio website with a unique **IDE-inspired theme**. Built with React, Tailwind CSS, and Framer Motion, this project simulates a professional code editor environment to showcase developer skills and projects.
 
-![Portfolio Preview](file:///C:/Users/KIIT0001/.gemini/antigravity/brain/a9714bf7-92b1-4537-9117-8009e8270442/uploaded_media_1769786642379.png)
+
 
 ## 🚀 Features
 
@@ -35,27 +35,6 @@ src/
 └── App.jsx          # Main application orchestration
 ```
 
-## ⚙️ Setup & Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/satakshi003/react-portfolio-v2.git
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Run in development mode**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
 
 ## 👤 Author
 
