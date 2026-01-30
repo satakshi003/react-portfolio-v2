@@ -8,6 +8,7 @@ export const personalInfo = {
   location: "Bhubaneswar, Odisha",
   linkedin: "https://www.linkedin.com/in/satakshi-subhasmita-7a9886202/",
   github: "https://github.com/satakshi003",
+  resume: "/resume.pdf", // Path to resume file in public folder
 };
 
 export const about = {

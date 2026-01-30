@@ -85,6 +85,9 @@ export default function Hero() {
           <MagneticButton variant="secondary" href="#contact" size="lg">
             Get In Touch
           </MagneticButton>
+          <MagneticButton variant="secondary" href={personalInfo.resume} size="lg" download="resume.pdf">
+            Download Resume
+          </MagneticButton>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}

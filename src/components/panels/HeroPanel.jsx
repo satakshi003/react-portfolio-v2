@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, FileDown } from 'lucide-react';
 import { personalInfo } from '../../data/content';
 import profileImg from '../sections/my-profile.png';
 
@@ -112,6 +112,14 @@ export default function HeroPanel() {
             className="p-3 rounded-lg bg-[#252526] border border-[#3c3c3c] text-[#cccccc] hover:text-[#3b82f6] hover:border-[#3b82f6] transition-all"
           >
             <Mail size={20} />
+          </a>
+          <a
+            href={personalInfo.resume}
+            download="resume.pdf"
+            className="p-3 rounded-lg bg-[#252526] border border-[#3c3c3c] text-[#cccccc] hover:text-[#3b82f6] hover:border-[#3b82f6] transition-all"
+            title="Download Resume"
+          >
+            <FileDown size={20} />
           </a>
         </motion.div>
       </div>
