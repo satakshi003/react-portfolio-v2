@@ -6,10 +6,10 @@ import { Sparkles, Code2, Palette, Zap } from 'lucide-react';
 
 export default function About() {
   const highlights = [
-    { icon: Code2, text: 'Clean Code', color: 'pink' },
-    { icon: Palette, text: 'UI/UX Focus', color: 'purple' },
-    { icon: Zap, text: 'Fast Learner', color: 'rose' },
-    { icon: Sparkles, text: 'Detail Oriented', color: 'pink' },
+    { icon: Code2, text: 'Clean Code', color: 'blue' },
+    { icon: Palette, text: 'UI/UX Focus', color: 'cyan' },
+    { icon: Zap, text: 'Fast Learner', color: 'blue' },
+    { icon: Sparkles, text: 'Detail Oriented', color: 'cyan' },
   ];
 
   return (

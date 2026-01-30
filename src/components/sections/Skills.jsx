@@ -113,7 +113,7 @@ export default function Skills() {
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.05 }}
                       className="px-4 py-2 text-sm font-medium text-gray-300 bg-white/5 border border-white/10 rounded-full
-                                 hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-pink-300 
+                                 hover:border-[#3b82f6]/50 hover:bg-[#3b82f6]/10 hover:text-blue-300 
                                  transition-all duration-300 cursor-default"
                     >
                       {skill}

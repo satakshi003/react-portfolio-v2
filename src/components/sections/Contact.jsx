@@ -14,21 +14,21 @@ export default function Contact() {
       label: 'Email',
       value: personalInfo.email,
       href: `mailto:${personalInfo.email}`,
-      color: 'pink',
+      color: 'blue',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'Let\'s Connect',
       href: personalInfo.linkedin,
-      color: 'purple',
+      color: 'cyan',
     },
     {
       icon: MapPin,
       label: 'Location',
       value: personalInfo.location,
       href: null,
-      color: 'rose',
+      color: 'blue',
     },
   ];
 
